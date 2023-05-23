@@ -1,3 +1,4 @@
+package basico;
 public class RepeticaoWHILE {
     public static void main(String[] args) {
         // while (<copndição>) { <codigo aqui> }

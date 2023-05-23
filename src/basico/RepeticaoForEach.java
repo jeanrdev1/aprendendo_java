@@ -1,3 +1,4 @@
+package basico;
 public class RepeticaoForEach {
     public static void main(String[] args) {
         // for-each > para cada

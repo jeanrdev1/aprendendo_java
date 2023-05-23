@@ -1,3 +1,4 @@
+package basico;
 public class Array {
     public static void main(String[] args) {
         // <tipo>[] nomeDoArray = new <tipo>[<tamanho>];

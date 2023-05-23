@@ -1,3 +1,4 @@
+package basico;
 public class CondicionalSWITCH {
     public static void main(String[] args) {
 

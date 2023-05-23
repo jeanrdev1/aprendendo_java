@@ -1,3 +1,4 @@
+package basico;
 public class CondicionalIF {
     public static void main(String[] args) {
         

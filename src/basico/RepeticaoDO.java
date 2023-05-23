@@ -1,3 +1,4 @@
+package basico;
 public class RepeticaoDO {
     public static void main(String[] args) {
         // do { <codigo aqui> } while (<condição>);

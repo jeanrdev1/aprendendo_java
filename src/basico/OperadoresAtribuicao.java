@@ -1,3 +1,4 @@
+package basico;
 public class OperadoresAtribuicao {
     public static void main(String[] args) {
         // = Atribuição Simples

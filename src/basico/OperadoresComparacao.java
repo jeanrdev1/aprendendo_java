@@ -1,3 +1,4 @@
+package basico;
 import java.util.Scanner;
 
 public class OperadoresComparacao {
