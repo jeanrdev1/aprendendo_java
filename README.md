@@ -5,3 +5,5 @@
 [Playlist Java Basico](https://www.youtube.com/watch?v=agNTOAaMF-w&list=PL9OV0G1OyYrfvQ9RGPZpcLVIS_GJ-iD9x)
 
 [Playlist Java POO](https://www.youtube.com/playlist?list=PL9OV0G1OyYrelYPUcQH7FAUBYZ3icWySV)
+
+[Playlist Sistema Estoque](https://www.youtube.com/playlist?list=PL9OV0G1OyYreAmxpUqo7R4dWFl4ZtRY2k)
