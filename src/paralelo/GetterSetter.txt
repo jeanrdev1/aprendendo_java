@@ -1,0 +1,18 @@
+Banco De Dados                      Pessoa
+> Salvar                            <- Validação
+> Deletar                           <- 
+> Atualizar
+
+
+> db > Deletar
+
+
+Laudo
+int id = 10;
+boolean enable = true;
+
+sistema removeLaudo(id);
+laudo.enable = false;
+
+BuscarTodos()
+where enable == true
