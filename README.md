@@ -7,3 +7,5 @@
 [Playlist Java POO](https://www.youtube.com/playlist?list=PL9OV0G1OyYrelYPUcQH7FAUBYZ3icWySV)
 
 [Playlist Sistema Estoque](https://www.youtube.com/playlist?list=PL9OV0G1OyYreAmxpUqo7R4dWFl4ZtRY2k)
+
+[Playlist SUSTO com API](https://www.youtube.com/playlist?list=PL9OV0G1OyYrflgiABeNpc1asZozGojJT1)
