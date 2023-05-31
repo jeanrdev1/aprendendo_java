@@ -3,7 +3,7 @@ package estoque.entity;
 public class Item {
     private int code;
     private String name;
-    int quantity;
+    private int quantity;
     float value;
 
     public Item(int code, String name, float value) {
@@ -19,6 +19,24 @@ public class Item {
 
     public String getName() {
         return name;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void addQuantity(int ammount) {
+        quantity += ammount;
+    }
+
+    public void removeQuantity(int ammount) {
+        // validando se a quantidade a remover é maior que o estoque existente
+        if (ammount > quantity) {
+            System.out.println("Quantitdade Invalida. Disponiveis: " + quantity);
+            // return em uma função com retorno void finaliza a função no momento que o return for executado
+            return;
+        }
+        quantity -= ammount;
     }
 
     public float totalValue() {

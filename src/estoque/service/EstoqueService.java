@@ -16,6 +16,14 @@ public class EstoqueService {
         }
     }
 
+    public void specialSearch(String text) {
+        for (Item item : stock) {
+            if (String.valueOf(item.getCode()).equals(text) || item.getName().contains(text)) {
+                System.out.println(item);
+            }
+        }
+    }
+
     public void addItem(int code, String name, float value) {
         if (existsByCodeOrName(code, name)) {
             System.out.printf("Codigo: %d ou Nome: %s ja Cadastrado!\n", code, name);
@@ -31,6 +39,24 @@ public class EstoqueService {
             System.out.println("Item nao encontrado!");
         } else {
             stock.remove(item);
+        }
+    }
+
+    public void addAmmount(int code, int ammount) {
+        Item item = getByCode(code);
+        if (item == null) {
+            System.out.println("Codigo invalido!");
+        } else {
+            item.addQuantity(ammount);
+        }
+    }
+
+    public void removeAmmount(int code, int ammount) {
+        Item item = getByCode(code);
+        if (item == null) {
+            System.out.println("Codigo invalido!");
+        } else {
+            item.removeQuantity(ammount);
         }
     }
 
