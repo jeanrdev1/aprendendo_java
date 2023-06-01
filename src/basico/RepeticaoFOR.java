@@ -10,7 +10,7 @@ public class RepeticaoFOR {
         int boisNoPasto = 99;
         int contagem = 0;
 
-        for (int i = 0; boisNoPasto >= 1; i++) {
+        for (; boisNoPasto >= 1;) {
             boisNoPasto--;
             contagem++;
         }
