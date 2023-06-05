@@ -18,6 +18,6 @@ public class Principal {
 
         System.out.println(complexo.toString());
 
-        Filho2Complexo complexo2 = new Filho2Complexo("Italo", 2);
+        // Filho2Complexo complexo2 = new Filho2Complexo("Italo", 2);
     }
 }
