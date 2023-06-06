@@ -9,3 +9,5 @@
 [Playlist Sistema Estoque](https://www.youtube.com/playlist?list=PL9OV0G1OyYreAmxpUqo7R4dWFl4ZtRY2k)
 
 [Playlist SUSTO com API](https://www.youtube.com/playlist?list=PL9OV0G1OyYrflgiABeNpc1asZozGojJT1)
+
+[Playlist SpringBoot API](https://www.youtube.com/watch?v=1FliG7Dr2fw&list=PL9OV0G1OyYrfs_hg5zSVPgL84WxEcN3sK)

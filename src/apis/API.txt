@@ -1,0 +1,17 @@
+Metodos HTTP
+
+GET > Buscar Dados
+POST > Enviar Dados
+PUT > Atualiza Dados
+PATCH > Atualiza Parcialmente
+DELETE > Deleta o Dado
+
+Status HTTP
+
+200 > OK
+201 > Recurso Criado 'POST'
+204 > No Content
+
+400 > EndPoint Incorreto
+401 > Não Autorizado
+404 > Recurso Não Encontrado
