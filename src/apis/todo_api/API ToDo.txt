@@ -1,0 +1,35 @@
+API ToDo
+
+Entidade > ToDo
+id > Long
+title > String
+description > String
+done > boolean
+
+findAll > Buscar ToDos - GET ()
+save > Salvar ToDo - POST (ToDo)
+updateStatus > Muda o Status do ToDo - PATCH (id)
+delete > Deleta o ToDo - DELETE (id)
+
+CRUD (Criar, Ler, Atualizar, Excluir)
+Criar (POST)
+Leitura (GET)
+Atualização (PATCH/PUT)
+Exclusão (DELETE)
+
+// Estrutura de Pastas
+controller
+    ToDoController.java
+service
+    ToDoService.java
+repository
+    ToDoRepository.java
+entity
+    ToDo.java
+
+// JSON
+
+{
+    "title": "Meu Primeiro ToDo",
+    "description": "Tarefas a Fazer"
+}
