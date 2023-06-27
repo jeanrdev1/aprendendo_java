@@ -1,0 +1,41 @@
+#Criar Banco de Dados
+CREATE DATABASE <nomeDoBanco>;
+ex: CREATE DATABASE sistema;
+
+#Criar Tabela
+CREATE TABLE <nomeDaTabela> ( <propriedades> );
+ex: CREATE TABLE cliente (
+    id int auto_increment primary key;
+    nome varchar(100);
+);
+
+#INSERIR DADOS (com pk)
+INSERT INTO <tableName> (<fields>) VALUES (<values>);
+ex: INSERT INTO cliente (id, nome) VALUES (1, 'Primeiro Cliente');
+
+#INSERIR DADOS (sem pk)
+INSERT INTO <tableName> (<fields>) VALUES (<values>);
+ex: INSERT INTO cliente (nome) VALUES ('Segundo Cliente');
+
+#BUSCAR DADOS
+SELECT <fields or *> FROM <tableName> WHERE <condicional>;
+ex: SELECT nome FROM cliente WHERE id = 1;
+
+#BUSCAR DADOS COM (LIKE)
+SELECT <fields or *> FROM <tableName> WHERE <field> LIKE "<reference>";
+|%<text>% = Que possui o texto entre o valor salvo
+|<text>% = Que possui o texto no inicio do valor salvo
+|%<text> = Que possui o texto no final do valor salvo
+ex: SELECT nome FROM cliente WHERE nome LIKE '%eiro%';
+
+#CONTAR REGISTROS
+SELECT COUNT(*) FROM <tableName> WHERE <field> LIKE "<reference>";
+ex: SELECT COUNT(*) FROM cliente WHERE nome LIKE '%oo%';
+
+#ATUALIZAR VALORES
+UPDATE <tableName> SET <valuesToSet> WHERE <condicional>;
+ex: UPDATE cliente SET nome = 'TESTE' WHERE id = 1;
+
+#DELETAR DADOS
+DELETE FROM <tableName> WHERE <condicional>;
+ex: DELETE FROM cliente WHERE id = 2;
