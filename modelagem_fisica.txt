@@ -1,0 +1,88 @@
+// Sistema de Endereços
+
+-----ENDEREÇO-----
+
+// Tabela: Endereco
+    -- id;
+    -- cep_id;
+    -- numero;
+    -- complemento;
+
+CREATE TABLE endereco (
+    id int auto_increment primary key,
+    cep_id int not null,
+    numero int,
+    complemento varchar(100),
+    FOREIGN KEY (cep_id) REFERENCES cep(id)
+);
+
+INSERT INTO endereco(cep_id, numero, complemento) VALUES (1, 10, 'Qd 18 Lt 44');
+INSERT INTO endereco(cep_id, numero, complemento) VALUES (2, 20, 'Sala 1285');
+INSERT INTO endereco(cep_id, numero, complemento) VALUES (3, 30, 'Qd 1 Lt 1');
+INSERT INTO endereco(cep_id, numero, complemento) VALUES (4, 40, 'Qd 14 Bloco A');
+
+-----CEP-----
+
+// Tabela: CEP
+    -- id;
+    -- cep;
+    -- rua;
+    -- bairro;
+    -- localidade;
+
+CREATE TABLE cep (
+    id int auto_increment primary key,
+    cep varchar(9),
+    rua varchar(100),
+    bairro varchar(100),
+    localidade varchar(100)
+);
+
+INSERT INTO cep (cep, rua, bairro, localidade) VALUES ('74914-620', 'Rua Visconde de Macaé', 'Jardim Maria Inês', 'Aparecida de Goiânia/GO');
+INSERT INTO cep (cep, rua, bairro, localidade) VALUES ('74175-120', 'Rua 1121', 'Setor Marista', 'Goiânia/GO');
+INSERT INTO cep (cep, rua, bairro, localidade) VALUES ('74315-040', 'Avenida Belo Horizonte', 'Jardim Ana Lúcia', 'Goiânia/GO');
+INSERT INTO cep (cep, rua, bairro, localidade) VALUES ('74955-500', 'Avenida Turquesa', 'Vila Oliveira', 'Aparecida de Goiânia/GO');
+
+SELECT * FROM endereco e INNER JOIN cep c ON e.cep_id = c.id;
+
+----------- COMPRAS ---------
+CREATE TABLE cliente (
+    id int auto_increment primary key,
+    nome varchar(100)
+);
+
+CREATE TABLE compra (
+    compra_id int auto_increment primary key,
+    client_id int,
+    FOREIGN KEY (client_id) REFERENCES cliente(id)
+);
+
+CREATE TABLE produto (
+    produto_id int auto_increment primary key,
+    nome varchar(100)
+);
+
+CREATE TABLE compra_produtos (
+    compra_id int,
+    produto_id int,
+    quantidade int default 1,
+    PRIMARY KEY (compra_id, produto_id),
+    FOREIGN KEY (compra_id) REFERENCES compra(compra_id),
+    FOREIGN KEY (produto_id) REFERENCES produto(produto_id)
+);
+
+// QUERY COM JOIN
+SELECT c.compra_id, cl.id, cl.nome, p.nome, cp.quantidade FROM compra c 
+JOIN cliente cl ON c.client_id = cl.id
+JOIN compra_produtos cp ON c.compra_id = cp.compra_id
+JOIN produto p ON cp.produto_id = p.produto_id;
+
+// INCREMENTO DE CODIGO
+
+ALTER TABLE produto ADD COLUMN valor DOUBLE DEFAULT 1.85;
+
+SELECT c.compra_id, SUM(p.valor * cp.quantidade)
+FROM compra c
+JOIN compra_produtos cp ON c.compra_id = cp.compra_id
+JOIN produto p ON cp.produto_id = p.produto_id
+GROUP BY c.compra_id;
